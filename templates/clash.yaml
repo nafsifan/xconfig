@@ -130,7 +130,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🎾 America Outbound
       - Hong Kong
       - Japan
       - United States
@@ -187,7 +186,6 @@ proxy-groups:
     proxies: &G
       - DIRECT
       - 节点选择
-      - 🎾 America Outbound
       - Hong Kong
       - Japan
       - United States
