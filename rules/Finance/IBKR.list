@@ -1,0 +1,26 @@
+## IBKR - 2025.07.04
+# 盈透证券 IBKR 核心服务
+DOMAIN,api.ibkr.com
+DOMAIN,tws.ibllc.com
+DOMAIN,www.interactivebrokers.com
+DOMAIN,ndcdyn.interactivebrokers.com
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,ibllc.com
+DOMAIN-SUFFIX,interactivebrokers.com
+DOMAIN,cdn.ibkr.com
+DOMAIN,secure.ibkr.com
+DOMAIN,nexus.interactivebrokers.com
+DOMAIN,ibg-api.interactivebrokers.com
+# 登录/交易系统相关
+DOMAIN,sdc1.ibllc.com
+DOMAIN,clearing.ibkr.com
+DOMAIN,pdf.ibkr.com
+DOMAIN,paper.ibkr.com
+DOMAIN,push.ibkr.com
+DOMAIN,gdcdyn.interactivebrokers.com
+# Zacks 财经图表/分析平台
+DOMAIN,staticx-tuner.zacks.com
+DOMAIN-SUFFIX,zacks.com
+# Akamai mPulse 性能统计服务（可选设为 REJECT 或 DIRECT）
+DOMAIN,c.go-mpulse.net
+DOMAIN-SUFFIX,go-mpulse.net
