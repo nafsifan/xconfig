@@ -238,10 +238,7 @@ rules:
 
   # AI 与账号
   - RULE-SET,AppleID,United States
-  - RULE-SET,OpenAI,United States
-  - RULE-SET,Claude,United States
-  - RULE-SET,Gemini,United States
-  - RULE-SET,Copilot,United States
+  - RULE-SET,AI,United States
   - RULE-SET,GoogleVoice,United States
 
   # 常用服务
@@ -342,36 +339,11 @@ rule-providers:
     path: ./Rules/GoogleVoice
     interval: 604800
 
-  OpenAI:
+  AI:
     type: http
     behavior: classical
-    url: >-
-      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
-    path: ./Rules/OpenAI
-    interval: 604800
-
-  Claude:
-    type: http
-    behavior: classical
-    url: >-
-      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
-    path: ./Rules/Claude
-    interval: 604800
-
-  Gemini:
-    type: http
-    behavior: classical
-    url: >-
-      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
-    path: ./Rules/Gemini
-    interval: 604800
-
-  Copilot:
-    type: http
-    behavior: classical
-    url: >-
-      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
-    path: ./Rules/Copilot
+    url: 'https://rule.kelee.one/Clash/AI.yaml'
+    path: ./Rules/AI
     interval: 604800
 
   # 富途牛牛
