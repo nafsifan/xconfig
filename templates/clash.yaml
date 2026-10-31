@@ -257,20 +257,32 @@ rules:
   - RULE-SET,Telegram,Telegram
 
   # 国内流量
-  - RULE-SET,China,DIRECT
+  - RULE-SET,Direct,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
+
+  # 海外代理
+  - RULE-SET,Proxy,节点选择
 
   # 兜底
   - MATCH,节点选择
 
 # 远程规则
 rule-providers:
-  China:
+  Direct:
     type: http
-    behavior: classical
-    url: 'https://rule.kelee.one/Clash/China.yaml'
-    path: ./Rules/China
-    interval: 604800
+    behavior: domain
+    url: >-
+      https://testingcf.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./Rules/Direct.yaml
+    interval: 86400
+
+  Proxy:
+    type: http
+    behavior: domain
+    url: >-
+      https://testingcf.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./Rules/Proxy.yaml
+    interval: 86400
 
   AppleCDN:
     type: http
