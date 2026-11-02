@@ -244,6 +244,7 @@ rules:
 
   # Apple 服务
   - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,AppleID,苹果服务
   - RULE-SET,Apple,苹果服务
 
   # 游戏平台
@@ -288,8 +289,17 @@ rule-providers:
     type: http
     behavior: classical
     format: text
-    url: https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/AppleCN.list
+    url: >-
+      https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/AppleCN.list
     path: ./Rules/AppleCN.list
+    interval: 86400
+
+  AppleID:
+    type: http
+    behavior: classical
+    format: yaml
+    url: 'https://rule.kelee.one/Clash/AppleID.yaml'
+    path: ./Rules/AppleID.yaml
     interval: 86400
 
   Apple:
