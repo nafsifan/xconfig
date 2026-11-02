@@ -370,9 +370,10 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: 'https://rule.kelee.one/Clash/AI.yaml'
+    url: >-
+      https://testingcf.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/global.yaml
     path: ./Rules/AI.yaml
-    interval: 604800
+    interval: 86400
 
   # 富途牛牛
   Moomoo:
