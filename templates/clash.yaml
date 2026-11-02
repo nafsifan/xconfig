@@ -1,6 +1,6 @@
 #  @ConfigName        Nafsi.xConfig for Windows (FlClash / Mihomo)
 #  @Author           @Nafsi
-#  @UpdateTime       2026/11/02 16:00 UTC/GMT +8
+#  @UpdateTime       2026/11/02 17:10 UTC/GMT +8
 #  @ConfigVersion     1.0.0
 #  @ConfigURL         https://github.com/nafsifan/xconfig
 
@@ -174,9 +174,9 @@ proxy-groups:
   - name: Other Regions
     type: select
     include-all: true
-    filter:
-      "^(?!.*(?i)(🇭🇰|🇯🇵|🇸🇬|🇺🇸|香港|日本|新加坡|美国|\
-      \\b(HK|HKG|JP|JPN|SG|SGP|US|USA)\\b)).*$"
+    filter: '.*'
+    exclude-filter: "(?i)(🇭🇰|🇯🇵|🇸🇬|🇺🇸|香港|日本|新加坡|狮城|美国|\\
+      \\b(HK|HKG|Hong\\s*Kong|JP|JPN|Japan|SG|SGP|Singapore|US|USA|United\\s*States|America)\\b)"
     icon: >-
       https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
 
