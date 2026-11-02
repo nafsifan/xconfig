@@ -1,6 +1,6 @@
 #  @ConfigName        Nafsi.xConfig for Windows (FlClash / Mihomo)
 #  @Author           @Nafsi
-#  @UpdateTime       2026/11/02 11:15 UTC/GMT +8
+#  @UpdateTime       2026/11/02 16:00 UTC/GMT +8
 #  @ConfigVersion     1.0.0
 #  @ConfigURL         https://github.com/nafsifan/xconfig
 
@@ -256,12 +256,12 @@ rules:
   # Telegram
   - RULE-SET,Telegram,Telegram
 
+  # 海外代理
+  - RULE-SET,Proxy,节点选择
+
   # 国内流量
   - RULE-SET,Direct,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
-
-  # 海外代理
-  - RULE-SET,Proxy,节点选择
 
   # 兜底
   - MATCH,节点选择
