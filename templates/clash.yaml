@@ -1,6 +1,6 @@
 #  @ConfigName        Nafsi.xConfig for Windows (FlClash / Mihomo)
-#  @Author            @Nafsi
-#  @UpdateTime        2026/10/30 17:25 UTC/GMT +8
+#  @Author           @Nafsi
+#  @UpdateTime       2026/11/02 11:15 UTC/GMT +8
 #  @ConfigVersion     1.0.0
 #  @ConfigURL         https://github.com/nafsifan/xconfig
 
@@ -233,7 +233,7 @@ rules:
   # Steam 下载
   - RULE-SET,SteamCN,DIRECT
 
-  # 金融证券
+  # 富途牛牛
   - RULE-SET,Moomoo,富途牛牛
 
   # AI相关
