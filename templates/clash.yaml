@@ -1,6 +1,6 @@
 #  @ConfigName        Nafsi.xConfig for Windows (FlClash / Mihomo)
 #  @Author           @Nafsi
-#  @UpdateTime       2026/11/02 17:10 UTC/GMT +8
+#  @UpdateTime       2026/11/02 17:50 UTC/GMT +8
 #  @ConfigVersion     1.0.0
 #  @ConfigURL         https://github.com/nafsifan/xconfig
 
@@ -243,7 +243,7 @@ rules:
   - RULE-SET,GoogleVoice,United States
 
   # Apple 服务
-  - RULE-SET,AppleCDN,DIRECT
+  - RULE-SET,AppleCN,DIRECT
   - RULE-SET,Apple,苹果服务
 
   # 游戏平台
@@ -257,10 +257,10 @@ rules:
   - RULE-SET,Telegram,Telegram
 
   # 海外代理
-  - RULE-SET,Proxy,节点选择
+  - RULE-SET,Global,节点选择
 
   # 国内流量
-  - RULE-SET,Direct,DIRECT
+  - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
 
   # 兜底
@@ -268,44 +268,44 @@ rules:
 
 # 远程规则
 rule-providers:
-  Direct:
+  China:
     type: http
-    behavior: domain
-    url: >-
-      https://testingcf.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    behavior: classical
+    format: yaml
+    url: https://rule.kelee.one/Clash/ChinaMax.yaml
     path: ./Rules/Direct.yaml
     interval: 86400
 
-  Proxy:
+  Global:
     type: http
-    behavior: domain
-    url: >-
-      https://testingcf.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
-    path: ./Rules/Proxy.yaml
+    behavior: classical
+    format: yaml
+    url: https://rule.kelee.one/Clash/Global.yaml
+    path: ./Rules/Global.yaml
     interval: 86400
 
-  AppleCDN:
+  AppleCN:
     type: http
     behavior: classical
     format: text
-    url: >-
-      https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/AppleCN.list
-    path: ./Rules/AppleCDN.list
+    url: https://testingcf.jsdelivr.net/gh/Repcz/Tool@X/mihomo/Rules/AppleCN.list
+    path: ./Rules/AppleCN.list
     interval: 86400
 
   Apple:
     type: http
     behavior: classical
-    url: >-
-      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml
-    path: ./Rules/Apple
+    format: yaml
+    url: https://rule.kelee.one/Clash/Apple.yaml
+    path: ./Rules/Apple.yaml
     interval: 86400
 
   Microsoft:
     type: http
     behavior: classical
+    format: yaml
     url: 'https://rule.kelee.one/Clash/Microsoft.yaml'
-    path: ./Rules/Microsoft
+    path: ./Rules/Microsoft.yaml
     interval: 604800
 
   Advertising:
@@ -313,36 +313,39 @@ rule-providers:
     behavior: classical
     format: yaml
     url: 'https://rule.kelee.one/Clash/Advertising.yaml'
-    path: ./Rules/Advertising
+    path: ./Rules/Advertising.yaml
     interval: 604800
 
   SteamCN:
     type: http
     behavior: classical
-    url: >-
-      https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml
-    path: ./Rules/SteamCN
+    format: yaml
+    url: https://rule.kelee.one/Clash/SteamCN.yaml
+    path: ./Rules/SteamCN.yaml
     interval: 86400
 
   Steam:
     type: http
     behavior: classical
+    format: yaml
     url: 'https://rule.kelee.one/Clash/Steam.yaml'
-    path: ./Rules/Steam
+    path: ./Rules/Steam.yaml
     interval: 604800
 
   Epic:
     type: http
     behavior: classical
+    format: yaml
     url: 'https://rule.kelee.one/Clash/Epic.yaml'
-    path: ./Rules/Epic
+    path: ./Rules/Epic.yaml
     interval: 604800
 
   Telegram:
     type: http
     behavior: classical
+    format: yaml
     url: 'https://rule.kelee.one/Clash/Telegram.yaml'
-    path: ./Rules/Telegram
+    path: ./Rules/Telegram.yaml
     interval: 604800
 
   GoogleVoice:
@@ -350,14 +353,15 @@ rule-providers:
     behavior: classical
     format: yaml
     url: 'https://rule.kelee.one/Clash/GoogleVoice.yaml'
-    path: ./Rules/GoogleVoice
+    path: ./Rules/GoogleVoice.yaml
     interval: 604800
 
   AI:
     type: http
     behavior: classical
+    format: yaml
     url: 'https://rule.kelee.one/Clash/AI.yaml'
-    path: ./Rules/AI
+    path: ./Rules/AI.yaml
     interval: 604800
 
   # 富途牛牛
