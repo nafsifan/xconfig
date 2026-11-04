@@ -222,6 +222,13 @@ proxy-groups:
     icon: >-
       https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
 
+  # 人工智能
+  - name: 人工智能
+    type: select
+    proxies: *G
+    icon: >-
+      https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+
 # 规则
 rules:
   # 局域网直连
@@ -236,8 +243,8 @@ rules:
   # 富途牛牛
   - RULE-SET,Moomoo,富途牛牛
 
-  # AI相关
-  - RULE-SET,AI,United States
+  # 人工智能
+  - RULE-SET,AI,人工智能
 
   # Google Voice
   - RULE-SET,GoogleVoice,United States
@@ -257,11 +264,8 @@ rules:
   # Telegram
   - RULE-SET,Telegram,Telegram
 
-  # 海外代理
-  - RULE-SET,Global,节点选择
-
   # 国内流量
-  - RULE-SET,China,DIRECT
+  - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
 
   # 兜底
@@ -269,22 +273,6 @@ rules:
 
 # 远程规则
 rule-providers:
-  China:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://rule.kelee.one/Clash/ChinaMax.yaml
-    path: ./Rules/Direct.yaml
-    interval: 86400
-
-  Global:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://rule.kelee.one/Clash/Global.yaml
-    path: ./Rules/Global.yaml
-    interval: 86400
-
   AppleCN:
     type: http
     behavior: classical
